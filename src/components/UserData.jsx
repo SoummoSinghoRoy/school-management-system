@@ -43,8 +43,10 @@ class UserData extends Component {
       )
     })
     return(
-      <div>
-        {postlist}
+      <div className='container border border-top-0'>
+        <div className="row">
+          {postlist}
+        </div>
       </div>
     )
   }

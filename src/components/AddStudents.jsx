@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import StudentsTable from './StudentsTable';
 import {Button,Modal, Media} from 'react-bootstrap';
+
 class AddStudent extends Component {
   state={
     name:'',email:'',mobile:'',city:'',_state:'',country:'',gender:'',_class:'',bio:'',
@@ -33,7 +34,7 @@ class AddStudent extends Component {
   submitHandler= (event)=>{
     event.preventDefault();
     const datas = [...this.state.datas];
-    const { name, email, mobile, city, _state, country, gender,_class,bio, hobbies}=this.state
+    const { name, email, mobile, city, _state, country, gender,_class,bio, hobbies }=this.state
     datas.push({name, email, mobile, city, _state, country, gender,_class, bio,hobbies})
     this.setState({
       datas ,name:'', email:'', mobile:'', city:'', _state:'', country:'', gender:'',_class:'', bio:'', hobbies:[]
@@ -58,7 +59,12 @@ class AddStudent extends Component {
         <div className="row">
           <div className="col-10"></div>
           <div className="col-2">
-            <Button className='mt-1' variant="primary" onClick={() => this.handleModal()}>
+            <Button className='mt-1
+            
+            
+            
+            
+             ' variant="primary" onClick={() => this.handleModal()}>
               <span><i className="fas fa-user-plus"></i> Add Students</span>
             </Button>
             <form onSubmit={this.submitHandler}>

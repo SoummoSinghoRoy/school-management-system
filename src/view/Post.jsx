@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import UserData from '../components/UserData';
+
 
 class Post extends Component {
   state={
@@ -25,6 +28,9 @@ class Post extends Component {
         <div className='card-body'>
           <h5 className='card-title'> Title: {this.state.post.title} </h5>
           <p className='card-text'> {this.state.post.body} </p>
+        </div>
+        <div className="card-footer">
+          <Link to='/users'><i class="fas fa-long-arrow-alt-left"></i><span className='pl-1'>Back To Post</span></Link>
         </div>
       </div>
     ):(
